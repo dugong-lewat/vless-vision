@@ -411,7 +411,7 @@ finish() {
 	echo -e "$Green SNI: $Font $xray_domain" | tee -a $info_file
 	echo -e "$Green TLS: $Font ${RedBG}XTLS${Font}" | tee -a $info_file
 	echo ""
-	echo -e "$Green Share link: $Font vless://${uuidv5:-$uuid}@$server_ip:$port?flow=$xtls_flow&security=xtls&sni=$xray_domain#$xray_domain" | tee -a $info_file
+	echo -e "$Green Share link: $Font vless://${uuidv5:-$uuid}@$xray_domain:$port?flow=$xtls_flow&security=tls&sni=$xray_domain#$xray_domain" | tee -a $info_file
 	echo ""
 	#echo -e "${GreenBG} Tip: ${Font}You can use flow control ${RedBG}xtls-rprx-splice${Font} on the Linux platform to get better performance."
 }
