@@ -55,9 +55,9 @@ panic() {
 
 update_script() {
 	fail=0
-	ol_version=$(curl -sL github.com/jiuqi9997/Xray-yes/raw/main/xray-yes-en.sh | grep "script_version=" | head -1 | awk -F '=|"' '{print $3}')
+	ol_version=$(curl -sL github.com/dugong-lewat/vless-vision/raw/vision/vless-vision.sh | grep "script_version=" | head -1 | awk -F '=|"' '{print $3}')
 	if [[ ! $(echo -e "$ol_version\n$script_version" | sort -rV | head -n 1) == "$script_version" ]]; then
-		wget -O xray-yes-en.sh github.com/jiuqi9997/Xray-yes/raw/main/xray-yes-en.sh || fail=1
+		wget -O xray-yes-en.sh github.com/dugong-lewat/vless-vision/raw/vision/vless-vision.sh || fail=1
 		[[ $fail -eq 1 ]] && warning "Failed to update" && sleep 2 && return 0
 		success "Successfully updated"
 		sleep 2
