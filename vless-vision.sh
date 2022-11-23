@@ -409,7 +409,7 @@ finish() {
 	echo -e "$Green UUID/Passwd: $Font ${passwd:-$uuid}" | tee -a $info_file
 	echo -e "$Green Flow: $Font $xtls_flow" | tee -a $info_file
 	echo -e "$Green SNI: $Font $xray_domain" | tee -a $info_file
-	echo -e "$Green TLS: $Font ${RedBG}XTLS${Font}" | tee -a $info_file
+	echo -e "$Green TLS: $Font ${RedBG}TLS${Font}" | tee -a $info_file
 	echo ""
 	echo -e "$Green Share link: $Font vless://${uuidv5:-$uuid}@$xray_domain:$port?flow=$xtls_flow&security=tls&sni=$xray_domain#$xray_domain" | tee -a $info_file
 	echo ""
